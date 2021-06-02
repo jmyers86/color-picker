@@ -7,6 +7,20 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: auto;
   min-height: 100%;
+}
+
+.Sliders {
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  align-content: flex-start;
+}
+
+.Picker {
+  background-color: darkgrey;
+  max-width: 20rem;
+  padding: 1rem;
+  margin: 3rem;
 }
