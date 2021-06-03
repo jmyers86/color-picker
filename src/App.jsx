@@ -1,4 +1,5 @@
 import React from 'react'
+import { Slider } from './components/Slider.jsx'
 
 export function App() {
   const newBackgroundColor = `hsl(50,8%,20%)`
@@ -8,20 +9,18 @@ export function App() {
       <h1>Classy Color Picker</h1>
       <div className="Picker">
         <div className="Color">
-          <div>Color</div>
+          <div className="ColorTitle">Color</div>
           <div className="ColorSwatch" style={newStyle}></div>
+          <input id="hsla" type="text" className="hsla" />
         </div>
         <div className="Sliders">
-          <label for="Hue">
-            H
-            <input type="range" id="Hue" />
-          </label>
-          <label for="Saturation">S</label>
-          <input type="range" id="Saturation" />
-          <label for="Light">L</label>
-          <input type="range" id="Light" />
+          <label> H</label>
+          <Slider type="range" id="Hue" className="Hue" />
+          <label>S</label>
+          <Slider type="range" id="Saturation" className="Saturation" />
+          <label>L</label>
+          <Slider type="range" id="Light " className="Light" />
         </div>
-        <input id="hsla" type="text" />
       </div>
     </>
   )

@@ -12,18 +12,38 @@ body {
 }
 
 .Sliders {
-  margin: auto;
+  margin: none;
   padding: 1rem;
   display: grid;
-  align-content: flex-start;
+
+  width: 360px;
 }
 .Color {
   display: flex;
+  flex-direction: column;
+}
+
+.ColorSwatch {
+  width: 5rem;
+  height: 5rem;
+  border: thin solid black;
 }
 
 .Picker {
+  display: flex;
+  justify-content: center;
   background-color: darkgrey;
-  max-width: 20rem;
+  max-width: auto;
   padding: 1rem;
   margin: 3rem;
+  text-align: center;
+}
+
+.hsla {
+  align-content: center;
+  margin: auto;
+}
+
+.Hue {
+  cursor: pointer;
 }
