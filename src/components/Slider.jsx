@@ -7,6 +7,9 @@ export class Slider extends React.Component {
         type={this.props.type}
         id={this.props.id}
         className={this.props.className}
+        defaultValue={this.props.value}
+        max={this.props.max}
+        onChange={this.props.onChange}
       />
     )
   }
