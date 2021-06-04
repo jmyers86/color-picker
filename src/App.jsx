@@ -14,6 +14,14 @@ export class App extends React.Component {
     this.setState({ h: event.target.value })
   }
 
+  handleSatChange = (event) => {
+    this.setState({ s: event.target.value })
+  }
+
+  handleLightChange = (event) => {
+    this.setState({ l: event.target.value })
+  }
+
   render() {
     const newBackgroundColor = `hsl(${this.state.h},${this.state.s}%,${this.state.l}%)`
     const newStyle = { backgroundColor: newBackgroundColor }
@@ -44,7 +52,7 @@ export class App extends React.Component {
               className="Saturation"
               value={this.state.s}
               max="100"
-              onChange={this.handleSliderChange}
+              onChange={this.handleSatChange}
             />
             <label>L</label>
             <Slider
@@ -53,7 +61,7 @@ export class App extends React.Component {
               className="Light"
               value={this.state.l}
               max="100"
-              onChange={this.handleSliderChange}
+              onChange={this.handleLightChange}
             />
           </div>
         </div>
