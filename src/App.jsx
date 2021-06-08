@@ -5,9 +5,9 @@ import { Hsla } from './components/hsla'
 
 export class App extends React.Component {
   state = {
-    h: 70,
-    s: 50,
-    l: 20,
+    h: Math.floor(Math.random() * 360),
+    s: Math.floor(Math.random() * 100),
+    l: Math.floor(Math.random() * 100),
   }
 
   handleHueChange = (event) => {
@@ -20,6 +20,14 @@ export class App extends React.Component {
 
   handleLightChange = (event) => {
     this.setState({ l: event.target.value })
+  }
+
+  randomColor = () => {
+    this.setState({
+      h: Math.floor(Math.random() * 360),
+      s: Math.floor(Math.random() * 100),
+      l: Math.floor(Math.random() * 100),
+    })
   }
 
   render() {
@@ -65,6 +73,9 @@ export class App extends React.Component {
             />
           </div>
         </div>
+        <button className="RandomColor" onClick={this.randomColor}>
+          Random Color!
+        </button>
       </>
     )
   }

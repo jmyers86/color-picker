@@ -11,6 +11,12 @@ body {
   min-height: 100%;
 }
 
+h1 {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
 .Sliders {
   margin: none;
   padding: 1rem;
@@ -46,4 +52,10 @@ body {
 
 .Hue {
   cursor: pointer;
+}
+
+.RandomColor {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
 }
